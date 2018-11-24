@@ -1,0 +1,28 @@
+
+utput: main.o student.o students.o course.o courses.o enrollment.o enrollments.o
+	g++ main.o student.o students.o course.o courses.o enrollment.o enrollments.o -o output
+
+main.o: main.cpp
+	g++ -c main.cpp
+
+student.o: student.cpp student.h
+	g++ -c student.cpp
+
+students.o: students.cpp students.h
+	g++ -c students.cpp
+
+course.o: course.cpp course.h
+	g++ -c course.cpp
+
+courses.o: courses.cpp courses.h
+	g++ -c courses.cpp
+
+enrollment.o: enrollment.cpp enrollment.h
+	g++ -c enrollment.cpp
+
+enrollments.o: enrollments.cpp enrollments.h
+	g++ -c enrollments.cpp
+
+clean:
+	rm *.o output
+	
